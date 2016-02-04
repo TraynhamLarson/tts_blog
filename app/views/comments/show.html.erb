@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @comment.author %>
+</p>
+<p>
+  <strong>Comment entry:</strong>
+  <%= truncate(@comment.comment_entry, length: 150) %>
+</p>
+<p>
+  <strong>Updated at:</strong>
+  <%= @comment.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
